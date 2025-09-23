@@ -1,0 +1,29 @@
+version: 2
+
+sources:
+  - name: raw_uat
+    database: dp-bt-integrations-beta
+    schema: cpq_uat
+    tables:
+      - name: contract
+      - name: account
+
+  - name: raw
+    database: dp-bt-integrations-beta
+    schema: pubsub_topics_sync
+    tables:
+      - name: csr_plan_updates
+      - name: salesforce_contracts
+
+  - name: raw_netsuite
+    database: dp-bt-integrations-beta
+    schema: netsuite_datamart
+    tables:
+      - name: referenced_resellers
+      - name: contract_override_customers_table
+
+  - name: raw_reference_rollup
+    database: dp-bt-integrations-beta
+    schema: netsuite_datamart
+    tables:
+      - name: reference_rollup
