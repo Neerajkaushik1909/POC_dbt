@@ -1,6 +1,4 @@
 {{ config(materialized='ephemeral') }}
-
-
 SELECT
           company.id AS company_id,
           office.plan.reseller.id AS reseller_id,

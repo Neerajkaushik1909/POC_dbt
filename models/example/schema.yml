@@ -1,21 +1,24 @@
-
 version: 2
 
 models:
-    - name: my_first_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+  - name: stg_account
+    description: "Staging model for account data"
+    columns:
+      - name: id
+        description: "Primary key"
+        tests:
+          - unique
+          - not_null
+      - name: name
+        description: "Account name"
 
-    - name: my_second_dbt_model
-      description: "A starter dbt model"
-      columns:
-          - name: id
-            description: "The primary key for this table"
-            tests:
-                - unique
-                - not_null
+
+# models:
+#   - name: contracts_sfdc       # your model name
+#     description: "Contracts enriched with account info"
+#     columns:
+#       - name: contract_id
+#         description: "Unique identifier for the contract"
+#         tests:
+#           - not_null
+#           - unique
